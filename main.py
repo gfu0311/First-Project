@@ -1,4 +1,4 @@
-from func import menu,insert
+from func import menu,insert,showall
 loop=True
 while(loop):
     menu()
@@ -10,6 +10,8 @@ while(loop):
         print(2)
     elif option ==3:
         print(3)
+    elif option == 4:
+        showall()
     elif option ==0:
         print('Exiting...')
         loop=False
