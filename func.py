@@ -7,6 +7,7 @@ def menu():
 | 1.录入学生信息                                  | 
 | 2.查找学生信息                                  |
 | 3.删除学生信息                                  |
+| 4.查看所有学生信息                              |
 | 0.退出
 """)
 
@@ -49,14 +50,20 @@ def insert():
 
 def delete():
     delete_ctrl=True
-    while(delete_ctrl):
-        delete_input=input('please input ID you want delete:')
+    f=open('record.txt','r')
+    content=f.readlines()
+    print(content)
+    # while(delete_ctrl):
+    #     delete_input=input('please input ID you want delete:')
         
 
 
 
-def view():
-    pass 
+def showall():
+    f=open('record.txt','r')
+    content=f.readlines()
+    print(content)
+    
        
 
 
