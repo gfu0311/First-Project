@@ -1,3 +1,4 @@
-['ID:1', 'Name:a', 'Score:100']
-['ID:2', 'Name:b', 'Score:60']
-['ID:3', 'Name:c', 'Score:85']
+
+[{'ID': '1', 'Name': 'a', 'Score': '100'}]
+[{'ID': '2', 'Name': 'b', 'Score': '60'}]
+[{'ID': '3', 'Name': 'c', 'Score': '85'}]

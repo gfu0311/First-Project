@@ -1,3 +1,4 @@
+import os
 def menu():
     print("""
 ———————————————————学生信息管理系统———————————————|
@@ -25,6 +26,7 @@ def insert():
     insert_ctrl=True
     while(insert_ctrl):
         list1=[]
+        dict1={}
         id=input('please input student id:')
         #check if digit if str.isdigit():
         if not id:
@@ -36,9 +38,11 @@ def insert():
             
         name=input('please input student name:')
         score=input('please input student score:')
-        list1.append('ID:'+id)
-        list1.append('Name:'+name)
-        list1.append('Score:'+score)
+        dict1={'ID':id,'Name':name,'Score':score}
+        list1.append(dict1)
+        # list1.append('ID:'+id)
+        # list1.append('Name:'+name)
+        # list1.append('Score:'+score)
         print(list1)
         write(str(list1)+'\n')
         insert_choice = input('continue to input y/n?')
@@ -52,7 +56,6 @@ def delete():
     delete_ctrl=True
     f=open('record.txt','r')
     content=f.readlines()
-    print(content)
     # while(delete_ctrl):
     #     delete_input=input('please input ID you want delete:')
         
@@ -63,6 +66,13 @@ def showall():
     f=open('record.txt','r')
     content=f.readlines()
     print(content)
+    for list in content:
+        print(list)
+        print(type(list))
+        dict1=eval(list)
+        print(type(dict1))
+        print(dict1)
+    os.system('pause')
     
        
 

@@ -9,4 +9,6 @@
 f=open('test.txt','r')
 content = f.readlines()
 print(content)
+for list in content:
+    print(list)
 

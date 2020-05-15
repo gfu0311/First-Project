@@ -1,0 +1,4 @@
+press any key to continue: os.system('pause')
+
+list to dict : dict = eval(list)
+
