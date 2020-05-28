@@ -1,4 +1,4 @@
-from func import menu,insert,showall
+from func import menu,insert,showall,searchid,search,delete
 loop=True
 while(loop):
     menu()
@@ -7,9 +7,9 @@ while(loop):
     if option == 1:
         insert()
     elif option == 2:
-        print(2)
+        search()
     elif option ==3:
-        print(3)
+        delete()
     elif option == 4:
         showall()
     elif option ==0:
