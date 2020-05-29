@@ -9,7 +9,8 @@ def menu():
 | 2.查找学生信息                                  |
 | 3.删除学生信息                                  |
 | 4.查看所有学生信息                              |
-| 0.退出
+| 5.按学生ID排序                                  |
+| 0.退出                                         |
 """)
 
 
@@ -31,11 +32,29 @@ def overwrite(str1):
     f.write('\n')
     f.close
 
+def readdb():
+    f=open('record.txt','r')
+    content=f.readlines()
+    f.close()
+    return content
+
+
+
+
+def checkid(n):
+    content=readdb()
+    for item in content:
+        dict1=eval(item)
+        if dict1['ID'] == n:
+            return('error')
+        else:
+            pass
+
+
 
 def insert():
     insert_ctrl=True
     while(insert_ctrl):
-        list1=[]
         dict1={}
         id=input('please input student id:')
         #check if digit if str.isdigit():
@@ -45,7 +64,18 @@ def insert():
                 continue
             else:
                 break
-            
+        result=checkid(id) 
+        if result == 'error':
+            print('The student ID already exist')
+            check1=input('continue to input y/n?')
+            if check1 == 'y':
+                continue
+            else:  
+                print('Exsting Insert')
+                pause()
+                break
+        else:
+            pass  
         name=input('please input student name:')
         score=input('please input student score:')
         dict1={'ID':id,'Name':name,'Score':score}
@@ -68,13 +98,16 @@ def delete():
     f=open('record.txt','r')
     content=f.readlines()
     f.close()
-    f=open('record')
+    f=open('record.txt','w')
+    f.truncate()
+    f.close()
     for item in content:
         dict1=eval(item)
         if dict1['ID'] == delete_a:
             pass
         else:
             write(dict1)
+    pause()
     
     
 
@@ -117,6 +150,23 @@ def search():
             else:
                 ctrl=False
     pause()
+
+
+def sort():
+    f=open('record.txt','r')
+    list1=[]
+    content=f.readlines()
+    for item in content:
+        dict1=eval(item)
+        list1.append(dict1)
+    list1.sort(key=lambda content:content['ID'])
+    n=len(list1)
+    for i in range(n):
+        print(list1[i])
+    pause()
+
+def modify():
+    
 
     
        
