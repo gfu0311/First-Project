@@ -11,3 +11,7 @@ dict1 = eval(str1)
 
  continue 跳过本次循环
  break 跳出循环，进入下个代码段
+
+ 冒泡排序  
+
+ lambda函数  list1.sort(key=lambda content:content['ID'])

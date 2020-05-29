@@ -1,5 +1,7 @@
 {'ID': '3', 'Name': 'c', 'Score': '3'}
-{'ID': '1', 'Name': '1', 'Score': '1'}
 {'ID': '2', 'Name': '2', 'Score': '2'}
 {'ID': '4', 'Name': '4', 'Score': '4'}
 {'ID': '5', 'Name': '5', 'Score': '5'}
+{'ID': '1', 'Name': '1', 'Score': '1'}
+{'ID': '2', 'Name': '& C:/Users/AO/AppData/Local/Programs/Python/Python38/python.exe c:/Users/AO/Documents/GitHub/First-Project/main.py', 'Score': '& C:/Users/AO/AppData/Local/Programs/Python/Python38/python.exe c:/Users/AO/Documents/GitHub/First-Project/main.py'}
+{'ID': '3', 'Name': '& C:/Users/AO/AppData/Local/Programs/Python/Python38/python.exe c:/Users/AO/Documents/GitHub/First-Project/main.py', 'Score': '& C:/Users/AO/AppData/Local/Programs/Python/Python38/python.exe c:/Users/AO/Documents/GitHub/First-Project/main.py'}
