@@ -1,4 +1,4 @@
-from func import menu,insert,showall,searchid,search,delete,sort
+from student_func import menu,insert,showall,searchid,search,delete,sort,modify
 loop=True
 while(loop):
     menu()
@@ -14,6 +14,8 @@ while(loop):
         showall()
     elif option == 5:
         sort()
+    elif option == 6:
+        modify()
     elif option ==0:
         print('Exiting...')
         loop=False
