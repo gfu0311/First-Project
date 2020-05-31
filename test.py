@@ -37,7 +37,17 @@
 # for i in range(n):
 #     print(list1[i])
 
-x=2
-y=3
-print(lambda x,y:x*y)
+# x=2
+# y=3
+# print(lambda x,y:x*y)
 
+
+# def test():
+#     for i in range(9):
+#         if i==5:
+#             print(5)
+#             return i
+#         else:
+#             print(i)
+#             return(i)
+# test()

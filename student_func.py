@@ -10,6 +10,7 @@ def menu():
 | 3.删除学生信息                                  |
 | 4.查看所有学生信息                              |
 | 5.按学生ID排序                                  |
+| 6.修改学生信息                                  |
 | 0.退出                                         |
 """)
 
@@ -47,8 +48,7 @@ def checkid(n):
         dict1=eval(item)
         if dict1['ID'] == n:
             return('error')
-        else:
-            pass
+        
 
 
 
@@ -113,6 +113,11 @@ def delete():
 
 def pause():
     os.system('pause')
+
+def cleardb():
+    f=open('record.txt','w')
+    f.truncate()
+    f.close
         
 
 
@@ -166,6 +171,27 @@ def sort():
     pause()
 
 def modify():
+    id=input('please input the student ID you want to modify: ')
+    result=checkid(id)
+    if result == 'error':
+        score=input('plsease input the new score: ')
+        content=readdb()
+        cleardb()
+        for item in content:
+            dict1=eval(item)
+            if dict1['ID'] == id:
+                dict1['Score'] = score
+                print(dict1)
+                write(dict1)
+            else:
+                write(dict1)
+                
+    else:
+        print('invalid ID')
+        pause()
+    
+
+
     
 
     
